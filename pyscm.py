@@ -1,4 +1,5 @@
-""" Scheme Interpreter in Python adapted from http://norvig.com/lispy.html"""
+""" Scheme interpreter in Python. Adapted from http://norvig.com/lispy.html.
+Source in https://github.com/finin/pyscm.  Tim Finin, finin@Umbc.edu """
 
 from __future__ import division
 import sys, re 
@@ -79,7 +80,7 @@ def read(s):
 
 def tokenize(s):
     """Convert a string into a list of tokens"""
-    return s.replace('(',' ( ').replace(')',' ) ').replace('\n', ' ').strip().split()
+    return s.replace('(',' ( ').replace(')',' ) ').replace('\n', ' ').split()
 
 def read_from(tokens):
     "Read an expression from a sequence of tokens."
